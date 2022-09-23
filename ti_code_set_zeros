@@ -1,0 +1,8 @@
+#------------#
+X, Y = np.meshgrid(np.arange(1,x+1), np.arange(1,y+1))
+a = X*Y
+N = np.ceil(img_ext/a)
+A = a*(a <= max_tile_size)*(N <= max_num_tiles)
+Z = A * (np.minimum(X,Y)/np.maximum(X,Y)) / N
+#print (Z)
+#------------#

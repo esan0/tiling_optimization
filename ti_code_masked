@@ -1,0 +1,8 @@
+#------------#
+W, H = np.meshgrid(np.arange(1,x+1), np.arange(1,y+1))
+a = W*H
+N = np.ceil(x/W) * np.ceil(y/H)
+S = np.minimum(W,H)/np.maximum(W,H)
+A = ma.masked_where(np.logical_or(a>max_tile_size, N>max_num_tiles), a)
+Z = A * S / N
+#------------#

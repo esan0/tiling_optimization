@@ -1,0 +1,9 @@
+#------------#
+# Set up variables and modules
+import numpy as np
+import numpy.ma as ma
+x,y = 5000,6000
+img_ext = x*y
+max_tile_size = 1024*1024
+max_num_tiles = 100
+#------------#

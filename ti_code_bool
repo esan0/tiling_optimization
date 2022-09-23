@@ -1,0 +1,9 @@
+#------------#
+W, H = np.meshgrid(np.arange(1,x+1), np.arange(1,y+1))
+Z = np.zeros((y,x))
+A = W*H
+N = np.ceil(x/W) * np.ceil(y/H)
+S = np.minimum(W,H)/np.maximum(W,H)
+m = (A <= max_tile_size) & (N <= max_num_tiles)
+Z[m] = A[m] * S[m] / N[m]
+#------------#
